@@ -38,7 +38,7 @@
             <a class="mobile_btn" id="mobile_btn">
              <i class="fas fa-bars"></i>
             </a>
-            eee
+        
             <ul class="nav user-menu">
                 {{-- <li class="nav-item dropdown noti-dropdown">
                   <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
