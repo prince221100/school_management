@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClassDataController;
-
+use App\Http\Controllers\ExamDetailController;
 use App\Http\Controllers\StudentAddController;
 use App\Http\Controllers\StudentsInfoController;
 use App\Http\Controllers\TeacherAddController;
@@ -78,3 +78,16 @@ Route::get('/classmate',[StudentsInfoController::class,'classmatedetail'])->name
 
 // Subject details
 Route::get('/subjectdetails',[StudentsInfoController::class,'subjectdetails'])->name('subjectdetails');
+
+// Exam details
+Route::get('/exam-assign',[ExamDetailController::class,'exam_assign'])->name('exam_assign');
+Route::post('/addexam',[ExamDetailController::class,'addexam'])->name('addexam');
+Route::get('/show-examdetails',[ExamDetailController::class,'showexamdetails'])->name('showexamdetails');
+
+Route::get('/editexamdetails/{id}',[ExamDetailController::class,'editexamdetails'])->name('editexamdetails');
+Route::post('/updateexamdetails/{id}',[ExamDetailController::class,'updateexamdetails'])->name('updateexamdetails');
+
+Route::get('/delexamdetails/{id}',[ExamDetailController::class,'delexamdetails'])->name('delexamdetails');
+
+// student show data exam
+Route::get('/showexamdata',[ExamDetailController::class,'showexamdata'])->name('showexamdata');

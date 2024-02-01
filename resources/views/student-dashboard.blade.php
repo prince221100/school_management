@@ -139,6 +139,9 @@
 <li class="menu-title">
 <span>Management</span>
 </li>
+<li>
+    <a href="{{Route('showexamdata')}}"><i class="fas fa-clipboard-list"></i> <span>Exam schedule</span></a>
+</li>
 <li class="submenu">
 <a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span></a>
 <ul>
@@ -156,9 +159,7 @@
 <li>
 <a href="fees.html"><i class="fas fa-comment-dollar"></i> <span>Fees</span></a>
 </li>
-<li>
-<a href="exam.html"><i class="fas fa-clipboard-list"></i> <span>Exam list</span></a>
-</li>
+
 <li>
 <a href="event.html"><i class="fas fa-calendar-day"></i> <span>Events</span></a>
 </li>

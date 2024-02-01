@@ -142,6 +142,15 @@
 <span>Management</span>
 </li>
 <li class="submenu">
+    <a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Exam </span> <span class="menu-arrow"></span></a>
+    <ul>
+    <li> <a href="{{Route('exam_assign')}}"><span>Exam Assign</span></a></li>
+    <li><a href="{{Route('showexamdetails')}}">Show Exam Details</a></li>
+
+    </ul>
+    </li>
+
+<li class="submenu">
 <a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span></a>
 <ul>
 <li><a href="fees-collections.html">Fees Collection</a></li>
@@ -157,9 +166,6 @@
 </li>
 <li>
 <a href="fees.html"><i class="fas fa-comment-dollar"></i> <span>Fees</span></a>
-</li>
-<li>
-<a href="exam.html"><i class="fas fa-clipboard-list"></i> <span>Exam list</span></a>
 </li>
 <li>
 <a href="event.html"><i class="fas fa-calendar-day"></i> <span>Events</span></a>

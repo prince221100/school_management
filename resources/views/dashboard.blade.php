@@ -17,9 +17,9 @@
          <div class="header">
             <div class="header-left">
                <a href="{{ Route('dashboard')}}" class="logo">
-               <img src="{{ Route('dashboard')}}" alt="Logo">
+               <img src="{{ url('frontend/img/logo.png')}}" alt="Logo">
                </a>
-               <a href="index.html" class="logo logo-small">
+               <a href="{{ Route('dashboard')}}" class="logo logo-small">
                <img src="{{ url('frontend/img/logo-small.png')}}" alt="Logo" width="30" height="30">
                </a>
             </div>

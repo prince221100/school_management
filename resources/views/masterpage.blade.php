@@ -12,6 +12,8 @@
       <link rel="stylesheet" href="{{ url('frontend/plugins/fontawesome/css/all.min.css')}}">
       <link rel="stylesheet" href="{{ url('frontend/css/style.css')}}">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
    </head>
    <body>
       <div class="main-wrapper">
@@ -38,7 +40,7 @@
             <a class="mobile_btn" id="mobile_btn">
              <i class="fas fa-bars"></i>
             </a>
-        
+
             <ul class="nav user-menu">
                 {{-- <li class="nav-item dropdown noti-dropdown">
                   <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">

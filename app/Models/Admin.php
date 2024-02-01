@@ -18,5 +18,9 @@ class Admin extends Model
         return $this->hasMany(Students_info::class,'student_id','id');
 
     }
+    public function Exam_Detail(){
+        return $this->hasMany(Exam_Detail::class,'teacher_name','id');
+
+    }
 }
 

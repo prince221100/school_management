@@ -14,4 +14,8 @@ class Class_info extends Model
     public function Students_info(){
         return $this->hasMany(Students_info::class,'class_name','id');
     }
+    public function Exam_Detail(){
+        return $this->hasMany(Exam_Detail::class,'class_name','id');
+
+    }
 }
