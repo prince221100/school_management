@@ -6,6 +6,7 @@ use App\Mail\forgotmail;
 use App\Models\Admin;
 use App\Models\Class_data;
 use App\Models\Class_info;
+use App\Models\Notice_Board_info;
 use App\Models\Students_info;
 use App\Models\Subject_info;
 use Carbon\Carbon;
@@ -125,7 +126,11 @@ class AdminController extends Controller
             $tcount = Admin::where('role','2')->count();
 
             $totalsubject = Subject_info::count();
-            // dd($scount);
+
+            // dd(date('Y-m-d'));
+            $notice = Notice_Board_info::where('date',date('Y-m-d'))->first();
+            // dd($notice);
+
             if($role == 1){
                 $rname = "Principle";
                 $totalclass= Class_info::count();
@@ -139,7 +144,7 @@ class AdminController extends Controller
                 $totaldata = Class_data::where('teacher_id',$id->id)->count();
                 // dd($totaldata);
 
-                return view('teacher-dashboard',['rname'=>$rname,'scount'=>$scount,'tcount'=>$tcount,'totaldata'=>$totaldata,'totalsubject'=>$totalsubject]);
+                return view('teacher-dashboard',['rname'=>$rname,'scount'=>$scount,'tcount'=>$tcount,'totaldata'=>$totaldata,'totalsubject'=>$totalsubject ,'notice'=>$notice]);
             }else{
                 $rname = "Student";
                 $id=Admin::where('email',$email)->first();
@@ -149,12 +154,12 @@ class AdminController extends Controller
                 if($classname != null){
                     $totalstu = Students_info::where('class_name',$classname->class_name)->count();
                     // dd($totalstu);
-                    return view('student-dashboard',['rname'=>$rname,'scount'=>$scount,'tcount'=>$tcount,'classname'=>$classname->class_name,'totalstudent'=>$totalstu]);
+                    return view('student-dashboard',['rname'=>$rname,'scount'=>$scount,'tcount'=>$tcount,'classname'=>$classname->class_name,'totalstudent'=>$totalstu,'notice'=>$notice]);
                 }
                 else{
                     $classname1 = 0;
                     $totalstu1=0;
-                    return view('student-dashboard',['rname'=>$rname,'scount'=>$scount,'tcount'=>$tcount,'classname'=>$classname1,'totalstudent'=>$totalstu1]);
+                    return view('student-dashboard',['rname'=>$rname,'scount'=>$scount,'tcount'=>$tcount,'classname'=>$classname1,'totalstudent'=>$totalstu1,'notice'=>$notice]);
 
                 }
             }

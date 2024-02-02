@@ -142,7 +142,17 @@
 <li>
     <a href="{{Route('showexamdata')}}"><i class="fas fa-clipboard-list"></i> <span>Exam schedule</span></a>
 </li>
+<li>
+<a href="{{Route('shownoticedetails')}}"><i class="fas fa-calendar-day"></i> <span>All Notice Information</span></a>
+</li>
 <li class="submenu">
+    <a href="#"><i class="fas fa-holly-berry"></i> <span> Leave Information</span> <span class="menu-arrow"></span></a>
+    <ul>
+    <li><a href="{{Route('leaverequest')}}">Leave Request</a></li>
+    <li><a href="{{Route('showstatus')}}">Leave Status</a></li>
+    </ul>
+</li>
+{{-- <li class="submenu">
 <a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span></a>
 <ul>
 <li><a href="fees-collections.html">Fees Collection</a></li>
@@ -161,88 +171,12 @@
 </li>
 
 <li>
-<a href="event.html"><i class="fas fa-calendar-day"></i> <span>Events</span></a>
-</li>
-<li>
 <a href="time-table.html"><i class="fas fa-table"></i> <span>Time Table</span></a>
 </li>
 <li>
 <a href="library.html"><i class="fas fa-book"></i> <span>Library</span></a>
-</li>
-{{-- <li class="menu-title">
-<span>Pages</span>
-</li>
-<li class="submenu">
-<a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
-<ul>
-<li><a href="login.html">Login</a></li>
-<li><a href="register.html">Register</a></li>
-<li><a href="forgot-password.html">Forgot Password</a></li>
-<li><a href="error-404.html">Error Page</a></li>
-</ul>
-</li>
-<li>
-<a href="blank-page.html"><i class="fas fa-file"></i> <span>Blank Page</span></a>
-</li>
-<li class="menu-title">
-<span>Others</span>
-</li>
-<li>
-<a href="sports.html"><i class="fas fa-baseball-ball"></i> <span>Sports</span></a>
-</li>
-<li>
-<a href="hostel.html"><i class="fas fa-hotel"></i> <span>Hostel</span></a>
-</li>
-<li>
-<a href="transport.html"><i class="fas fa-bus"></i> <span>Transport</span></a>
-</li>
-<li class="menu-title">
-<span>UI Interface</span>
 </li> --}}
-{{-- <li>
-<a href="components.html"><i class="fas fa-vector-square"></i> <span>Components</span></a>
-</li>
-<li class="submenu">
-<a href="#"><i class="fas fa-columns"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
-<ul>
-<li><a href="form-basic-inputs.html">Basic Inputs </a></li>
-<li><a href="form-input-groups.html">Input Groups </a></li>
-<li><a href="form-horizontal.html">Horizontal Form </a></li>
-<li><a href="form-vertical.html"> Vertical Form </a></li>
-<li><a href="form-mask.html"> Form Mask </a></li>
-<li><a href="form-validation.html"> Form Validation </a></li>
-</ul>
-</li>
-<li class="submenu">
-<a href="#"><i class="fas fa-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
-<ul>
-<li><a href="tables-basic.html">Basic Tables </a></li>
-<li><a href="data-tables.html">Data Table </a></li>
-</ul>
-</li>
-<li class="submenu">
-<a href="javascript:void(0);"><i class="fas fa-code"></i> <span>Multi Level</span> <span class="menu-arrow"></span></a>
-<ul>
-<li class="submenu">
-<a href="javascript:void(0);"> <span>Level 1</span> <span class="menu-arrow"></span></a>
-<ul>
-<li><a href="javascript:void(0);"><span>Level 2</span></a></li>
-<li class="submenu">
-<a href="javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
-<ul>
-<li><a href="javascript:void(0);">Level 3</a></li>
-<li><a href="javascript:void(0);">Level 3</a></li>
-</ul>
-</li>
-<li><a href="javascript:void(0);"> <span>Level 2</span></a></li>
-</ul>
-</li>
-<li>
-<a href="javascript:void(0);"> <span>Level 1</span></a>
-</li>
-</ul>
-</li>
-</ul> --}}
+
 </div>
 </div>
 </div>
@@ -337,173 +271,124 @@
 
 
 <div class="row">
-<div class="col-12 col-lg-12 col-xl-9">
-<div class="card flex-fill">
-<div class="card-header">
-<div class="row align-items-center">
-<div class="col-6">
-<h5 class="card-title">Today’s Lesson</h5>
-</div>
-<div class="col-6">
-<span class="float-right view-link"><a href="#">View All Courses</a></span>
-</div>
-</div>
-</div>
-<div class="dash-circle">
-<div class="row">
-<div class="col-12 col-lg-6 col-xl-6 dash-widget3">
-<div class="card-body dash-widget1">
-<div class="circle-bar circle-bar2">
-<div class="circle-graph2" data-percent="20">
-<b>20%</b>
-</div>
-<h6>Lesson Learned</h6>
-<h4>10 <span>/ 50</span></h4>
-</div>
-<div class="dash-details">
-<h4>Facilisi etiam</h4>
-<ul>
-<li><i class="fas fa-clock"></i> 2.30pm - 3.30pm</li>
-<li><i class="fas fa-book-open"></i> 5 Lessons</li>
-<li><i class="fas fa-hourglass-end"></i> 60 Minutes</li>
-<li><i class="fas fa-clipboard-check"></i> 5 Asignment</li>
-</ul>
-<div class="dash-btn">
-<button type="submit" class="btn btn-info btn-border">Skip</button>
-<button type="submit" class="btn btn-info">Continue</button>
-</div>
-</div>
-</div>
-</div>
-<div class="col-12 col-lg-6 col-xl-6 dash-widget4">
-<div class="card-body dash-widget1 dash-widget2">
-<div class="circle-bar circle-bar3">
-<div class="circle-graph3" data-percent="50">
-<b>50%</b>
-</div>
-<h6>Lesson Learned</h6>
-<h4>25 <span>/ 50</span></h4>
-</div>
-<div class="dash-details">
-<h4>Augue mauris</h4>
-<ul>
-<li><i class="fas fa-clock"></i> 3.30pm - 4.30pm</li>
-<li><i class="fas fa-book-open"></i> 6 Lessons</li>
-<li><i class="fas fa-hourglass-end"></i> 60 Minutes</li>
-<li><i class="fas fa-clipboard-check"></i> 6 Asignment</li>
-</ul>
-<div class="dash-btn">
-<button type="submit" class="btn btn-info btn-border">Skip</button>
-<button type="submit" class="btn btn-info">Continue</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-12 col-lg-12 col-xl-8 d-flex">
-<div class="card flex-fill">
-<div class="card-header">
-<div class="row align-items-center">
-<div class="col-6">
-<h5 class="card-title">Learning Activity</h5>
-</div>
-<div class="col-6">
-<ul class="list-inline-group text-right mb-0 pl-0">
-<li class="list-inline-item">
-<div class="form-group mb-0 amount-spent-select">
-<select class="form-control form-control-sm">
-<option>Weekly</option>
-<option>Monthly</option>
-<option>Yearly</option>
-</select>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="card-body">
-<div id="apexcharts-area"></div>
-</div>
-</div>
-</div>
-<div class="col-12 col-lg-12 col-xl-4 d-flex">
-<div class="card flex-fill">
-<div class="card-header">
-<h5 class="card-title">Learning History</h5>
-</div>
-<div class="card-body">
-<div class="teaching-card">
-<ul class="activity-feed">
-<li class="feed-item">
-<div class="feed-date1">Sep 05, 9 am - 10 am (60min)</div>
-<span class="feed-text1"><a>Lorem ipsum dolor</a></span>
-<p><span>In Progress</span></p>
-</li>
-<li class="feed-item">
-<div class="feed-date1">Sep 04, 2 pm - 3 pm (70min)</div>
-<span class="feed-text1"><a>Et dolore magna</a></span>
-<p>Completed</p>
-</li>
-<li class="feed-item">
-<div class="feed-date1">Sep 02, 1 pm - 2 am (80min)</div>
-<span class="feed-text1"><a>Exercitation ullamco</a></span>
-<p><span>In Progress</span></p>
-</li>
-<li class="feed-item">
-<div class="feed-date1">Aug 30, 10 am - 12 pm (90min)</div>
-<span class="feed-text1"><a>Occaecat cupidatat</a></span>
-<p>Completed</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-12 col-lg-12 col-xl-3 d-flex">
-<div class="card flex-fill">
-<div class="card-header">
-<div class="row align-items-center">
-<div class="col-12">
-<h5 class="card-title">Calendar</h5>
-</div>
-</div>
-</div>
-<div class="card-body">
-<div id="calendar-doctor" class="calendar-container"></div>
-<div class="calendar-info calendar-info1">
-<div class="calendar-details">
-<p>09 am</p>
-<h6 class="calendar-blue d-flex justify-content-between align-items-center">Fermentum <span>09am - 10pm</span></h6>
-</div>
-<div class="calendar-details">
-<p>10 am</p>
-<h6 class="calendar-violet d-flex justify-content-between align-items-center">Pharetra et <span>10am - 11am</span></h6>
-</div>
-<div class="calendar-details">
-<p>11 am</p>
-<h6 class="calendar-red d-flex justify-content-between align-items-center">Break <span>11am - 11.30am</span></h6>
-</div>
-<div class="calendar-details">
-<p>12 pm</p>
-<h6 class="calendar-orange d-flex justify-content-between align-items-center">Massa <span>11.30am - 12.00pm</span></h6>
-</div>
-<div class="calendar-details">
-<p>09 am</p>
-<h6 class="calendar-blue d-flex justify-content-between align-items-center">Fermentum <span>09am - 10pm</span></h6>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+    <div class="col-12 col-lg-12 col-xl-12">
+    <div class="row">
+    <div class="col-12 col-lg-8 col-xl-12 d-flex">
+    <div class="card flex-fill">
+    <div class="card-header">
+    <div class="row align-items-center">
+    <div class="col-6">
+    <h5 class="card-title">Today Notice Board</h5>
+    </div>
+    {{-- <div class="col-6">
+    <span class="float-right view-link"><button type="submit" class="btn btn-info"><a href="{{Route('shownoticedetails')}}" style="color: white">Next Notice</a></button>
+    </span> --}}
+    {{-- </div> --}}
+    </div>
+    </div>
+    <div class="">
+    <div class="table-responsive lesson">
+    <table class="table table-center">
+    <tbody>
+     <tr>
+    @if ($notice !== null)
 
-</div>
+        <td>
+        <div class="date">
+        <b>Date</b>
+        <p>{{$notice->date}}</p>
+        </div>
+        </td>
+        <td>
+        <div class="date">
+        <b>Notice Message</b>
+        <p>{{$notice->Message}}</p>
+        </div>
+        </td>
+        {{-- <td><a href="#">Confirmed</a></td> --}}
+        <td><button type="submit" class="btn btn-info"><a href="{{Route('shownoticedetails')}}" style="color: white">Next Notice</a></button></td>
+
+    @else
+        <td>Notice is not available today.</td>
+        <td><button type="submit" class="btn btn-info"><a href="{{Route('shownoticedetails')}}" style="color: white">Next Notice</a></button></td>
+
+    @endif
+    </tr>
+
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    </div>
+    <div class="row">
+    <div class="col-12 col-lg-6 col-xl-8 d-flex">
+    <div class="card flex-fill">
+    <div class="card-header">
+    <div class="row align-items-center">
+    <div class="col-6">
+    <h5 class="card-title">Teaching Activity</h5>
+    </div>
+    <div class="col-6">
+    <ul class="list-inline-group text-right mb-0 pl-0">
+    <li class="list-inline-item">
+    <div class="form-group mb-0 amount-spent-select">
+    <select class="form-control form-control-sm">
+    <option>Weekly</option>
+    <option>Monthly</option>
+    <option>Yearly</option>
+    </select>
+    </div>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <div class="card-body">
+    <div id="apexcharts-area"></div>
+    </div>
+    </div>
+    </div>
+    <div class="col-12 col-lg-6 col-xl-4 d-flex">
+    <div class="card flex-fill">
+    <div class="card-header">
+     <h5 class="card-title">Teaching History</h5>
+    </div>
+    <div class="card-body">
+    <div class="teaching-card">
+    <ul class="activity-feed">
+    <li class="feed-item">
+    <div class="feed-date1">Sep 05, 9 am - 10 am (60min)</div>
+    <span class="feed-text1"><a>Lorem ipsum dolor</a></span>
+    <p><span>In Progress</span></p>
+    </li>
+    <li class="feed-item">
+    <div class="feed-date1">Sep 04, 2 pm - 3 pm (70min)</div>
+    <span class="feed-text1"><a>Et dolore magna</a></span>
+    <p>Completed</p>
+    </li>
+    <li class="feed-item">
+    <div class="feed-date1">Sep 02, 1 pm - 2 am (80min)</div>
+    <span class="feed-text1"><a>Exercitation ullamco</a></span>
+    <p>Completed</p>
+    </li>
+    <li class="feed-item">
+    <div class="feed-date1">Aug 30, 10 am - 12 pm (90min)</div>
+    <span class="feed-text1"><a>Occaecat cupidatat</a></span>
+    <p>Completed</p>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    </div>
 
 <footer>
 <p>Copyright © 2020 Dreamguys.</p>

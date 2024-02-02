@@ -187,6 +187,21 @@
                         <span>Management</span>
                      </li>
                      <li class="submenu">
+                        <a href="#"><i class="fas fa-calendar-day"></i> <span>Notice Board</span> <span class="menu-arrow"></span></a>
+                        <ul>
+                           <li><a href="{{Route('addnotice')}}"> <span>Notice Board </span></a></li>
+                           <li><a href="{{Route('shownoticedetails')}}">All details</a></li>
+
+                        </ul>
+                     </li>
+                     <li class="submenu">
+                        <a href="#"><i class="fas fa-holly-berry"></i> <span> Leave Information</span> <span class="menu-arrow"></span></a>
+                        <ul>
+                        <li><a href="{{Route('showstudent')}}"> All Leave Request Student</a></li>
+                        <li><a href="expenses.html">Leave Status</a></li>
+                        </ul>
+                    </li>
+                     <li class="submenu">
                         <a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span></a>
                         <ul>
                            <li><a href="fees-collections.html">Fees Collection</a></li>
@@ -203,9 +218,7 @@
                      <li>
                         <a href="fees.html"><i class="fas fa-comment-dollar"></i> <span>Fees</span></a>
                      </li>
-                     <li>
-                        <a href="exam.html"><i class="fas fa-clipboard-list"></i> <span>Exam list</span></a>
-                     </li>
+
                      <li>
                         <a href="event.html"><i class="fas fa-calendar-day"></i> <span>Events</span></a>
                      </li>

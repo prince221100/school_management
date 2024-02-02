@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClassDataController;
 use App\Http\Controllers\ExamDetailController;
+use App\Http\Controllers\LeaveInfoController;
+use App\Http\Controllers\NoticeBoardInfoController;
 use App\Http\Controllers\StudentAddController;
 use App\Http\Controllers\StudentsInfoController;
 use App\Http\Controllers\TeacherAddController;
@@ -91,3 +93,27 @@ Route::get('/delexamdetails/{id}',[ExamDetailController::class,'delexamdetails']
 
 // student show data exam
 Route::get('/showexamdata',[ExamDetailController::class,'showexamdata'])->name('showexamdata');
+
+// Notice board:-
+Route::get('/add-noticeboard',[NoticeBoardInfoController::class,'addnotice'])->name('addnotice');
+Route::post('/add-noticedata',[NoticeBoardInfoController::class,'addnoticedata'])->name('addnoticedata');
+Route::get('/show-noticedetails',[NoticeBoardInfoController::class,'shownoticedetails'])->name('shownoticedetails');
+
+Route::get('/editnoticedetails/{id}',[NoticeBoardInfoController::class,'editnoticedetails'])->name('editnoticedetails');
+Route::post('/updatenoticedetails/{id}',[NoticeBoardInfoController::class,'updatenoticedetails'])->name('editnoticedata');
+
+Route::get('/delnoticedetails/{id}',[NoticeBoardInfoController::class,'delnoticedetails'])->name('delnoticedata');
+
+//Student Leave
+Route::get('/leave-request',[LeaveInfoController::class,'leave_request'])->name('leaverequest');
+Route::post('/add-leave',[LeaveInfoController::class,'add_leave'])->name('add_leave');
+
+Route::get('/showstatus',[LeaveInfoController::class,'show_status'])->name('showstatus');
+
+
+// Principle accept or not and show data
+Route::get('/showstudentleave',[LeaveInfoController::class,'show_studentleave'])->name('showstudent');
+
+Route::get('/acceptrequest/{id}',[LeaveInfoController::class,'acceptrequest'])->name('acceptrequest');
+Route::get('/denyrequest/{id}',[LeaveInfoController::class,'denyrequest'])->name('denyrequest');
+

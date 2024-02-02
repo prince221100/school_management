@@ -148,8 +148,11 @@
     <li><a href="{{Route('showexamdetails')}}">Show Exam Details</a></li>
 
     </ul>
-    </li>
+</li>
 
+    <li>
+    <a href="{{Route('shownoticedetails')}}"><i class="fas fa-calendar-day"></i> <span>All Notice inforamtion</span></a>
+    </li>
 <li class="submenu">
 <a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span></a>
 <ul>
@@ -166,9 +169,6 @@
 </li>
 <li>
 <a href="fees.html"><i class="fas fa-comment-dollar"></i> <span>Fees</span></a>
-</li>
-<li>
-<a href="event.html"><i class="fas fa-calendar-day"></i> <span>Events</span></a>
 </li>
 <li>
 <a href="time-table.html"><i class="fas fa-table"></i> <span>Time Table</span></a>
@@ -264,100 +264,56 @@
 
 
 <div class="row">
-<div class="col-12 col-lg-12 col-xl-9">
+<div class="col-12 col-lg-12 col-xl-12">
 <div class="row">
-<div class="col-12 col-lg-8 col-xl-8 d-flex">
+<div class="col-12 col-lg-8 col-xl-12 d-flex">
 <div class="card flex-fill">
 <div class="card-header">
 <div class="row align-items-center">
 <div class="col-6">
-<h5 class="card-title">Upcoming Lesson</h5>
+<h5 class="card-title">Today Notice Board</h5>
 </div>
-<div class="col-6">
-<span class="float-right view-link"><a href="#">View All Courses</a></span>
+{{-- <div class="col-6">
+<span class="float-right view-link"><button type="submit" class="btn btn-info"><a href="{{Route('shownoticedetails')}}" style="color: white">Next Notice</a></button>
+</span> --}}
+{{-- </div> --}}
 </div>
 </div>
-</div>
-<div class="pt-3 pb-3">
+<div class="">
 <div class="table-responsive lesson">
 <table class="table table-center">
 <tbody>
 <tr>
-<td>
-<div class="date">
-<b>Aug 4, Tuesday</b>
-<p>2.30pm - 3.30pm (60min)</p>
-</div>
-</td>
-<td>
-<div class="date">
-<b>Lessons 30</b>
-<p>3.1 Ipsuum dolor</p>
-</div>
-</td>
-<td><a href="#">Confirmed</a></td>
-<td><button type="submit" class="btn btn-info">Reschedule</button></td>
+@if ($notice !== null)
+
+    <td>
+    <div class="date">
+    <b>Date</b>
+    <p>{{$notice->date}}</p>
+    </div>
+    </td>
+    <td>
+    <div class="date">
+    <b>Notice Message</b>
+    <p>{{$notice->Message}}</p>
+    </div>
+    </td>
+    {{-- <td><a href="#">Confirmed</a></td> --}}
+    <td><button type="submit" class="btn btn-info"><a href="{{Route('shownoticedetails')}}" style="color: white">Next Notice</a></button></td>
+@else
+    <td>Notice is not available today.</td>
+    <td><button type="submit" class="btn btn-info"><a href="{{Route('shownoticedetails')}}" style="color: white">Next Notice</a></button></td>
+
+@endif
 </tr>
-<tr>
-<td>
-<div class="date">
-<b>Aug 5, Wednesday</b>
-<p>3.00pm - 4.30pm (90min)</p>
-</div>
-</td>
-<td>
-<div class="date">
-<b>Lessons 31</b>
-<p>3.2 Ipsuum dolor</p>
-</div>
-</td>
-<td><a href="#">Confirmed</a></td>
-<td><button type="submit" class="btn btn-info">Reschedule</button></td>
-</tr>
-<tr>
-<td>
-<div class="date">
-<b>Aug 6, Thursday</b>
-<p>11.00am - 12.00pm (20min)</p>
-</div>
-</td>
-<td>
-<div class="date">
-<b>Lessons 32</b>
-<p>3.3 Ipsuum dolor</p>
-</div>
-</td>
-<td><a href="#">Confirmed</a></td>
-<td><button type="submit" class="btn btn-info">Reschedule</button></td>
-</tr>
+
 </tbody>
 </table>
 </div>
 </div>
 </div>
 </div>
-<div class="col-12 col-lg-4 col-xl-4 d-flex">
-<div class="card flex-fill">
-<div class="card-header">
-<div class="row align-items-center">
-<div class="col-12">
-<h5 class="card-title">Semester Progress</h5>
-</div>
-</div>
-</div>
-<div class="dash-widget">
-<div class="circle-bar circle-bar1">
-<div class="circle-graph1" data-percent="50">
-<b>50%</b>
-</div>
-</div>
-<div class="dash-info">
-<h6>Lesson Progressed</h6>
-<h4>30 <span>/ 60</span></h4>
-</div>
-</div>
-</div>
-</div>
+
 </div>
 <div class="row">
 <div class="col-12 col-lg-6 col-xl-8 d-flex">
@@ -422,43 +378,7 @@
 </div>
 </div>
 </div>
-<div class="col-12 col-lg-12 col-xl-3 d-flex">
-<div class="card flex-fill">
-<div class="card-header">
-<div class="row align-items-center">
-<div class="col-12">
-<h5 class="card-title">Calendar</h5>
-</div>
-</div>
-</div>
-<div class="card-body">
-<div id="calendar-doctor" class="calendar-container"></div>
-<div class="calendar-info calendar-info1">
-<div class="calendar-details">
-<p>09 am</p>
-<h6 class="calendar-blue d-flex justify-content-between align-items-center">Fermentum <span>09am - 10pm</span></h6>
-</div>
-<div class="calendar-details">
-<p>10 am</p>
-<h6 class="calendar-violet d-flex justify-content-between align-items-center">Pharetra et <span>10am - 11am</span></h6>
-</div>
-<div class="calendar-details">
-<p>11 am</p>
-<h6 class="calendar-red d-flex justify-content-between align-items-center">Break <span>11am - 11.30am</span></h6>
-</div>
-<div class="calendar-details">
-<p>12 pm</p>
-<h6 class="calendar-orange d-flex justify-content-between align-items-center">Massa <span>11.30am - 12.00pm</span></h6>
-</div>
-<div class="calendar-details">
-<p>09 am</p>
-<h6 class="calendar-blue d-flex justify-content-between align-items-center">Fermentum <span>09am - 10pm</span></h6>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 
 </div>
 

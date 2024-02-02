@@ -22,5 +22,9 @@ class Admin extends Model
         return $this->hasMany(Exam_Detail::class,'teacher_name','id');
 
     }
+    public function Leave_info(){
+        return $this->hasMany(Leave_Info::class,'user_id','id');
+
+    }
 }
 
