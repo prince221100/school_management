@@ -197,11 +197,12 @@
                      <li class="submenu">
                         <a href="#"><i class="fas fa-holly-berry"></i> <span> Leave Information</span> <span class="menu-arrow"></span></a>
                         <ul>
-                        <li><a href="{{Route('showstudent')}}"> All Leave Request Student</a></li>
-                        <li><a href="expenses.html">Leave Status</a></li>
+                        <li><a href="{{Route('showstudent')}}"> All Leave Request of Students</a></li>
+                        <li><a href="{{Route('showstatusteacher')}}"> All Leave Request of Teachers</a></li>
+
                         </ul>
                     </li>
-                     <li class="submenu">
+                     {{-- <li class="submenu">
                         <a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span></a>
                         <ul>
                            <li><a href="fees-collections.html">Fees Collection</a></li>
@@ -227,7 +228,7 @@
                      </li>
                      <li>
                         <a href="library.html"><i class="fas fa-book"></i> <span>Library</span></a>
-                     </li>
+                     </li> --}}
                      {{-- <li class="menu-title">
                         <span>Pages</span>
                      </li>

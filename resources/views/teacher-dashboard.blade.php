@@ -153,7 +153,16 @@
     <li>
     <a href="{{Route('shownoticedetails')}}"><i class="fas fa-calendar-day"></i> <span>All Notice inforamtion</span></a>
     </li>
-<li class="submenu">
+    <li class="submenu">
+        <a href="#"><i class="fas fa-holly-berry"></i> <span> Leave Information</span> <span class="menu-arrow"></span></a>
+        <ul>
+        <li><a href="{{Route('leaverequestteacher')}}">Leave Request</a></li>
+        <li><a href="{{Route('showstatus')}}">Leave Status</a></li>
+        <li><a href="{{Route('showstudent')}}"> All Leave Request of Student</a></li>
+
+        </ul>
+    </li>
+{{-- <li class="submenu">
 <a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span class="menu-arrow"></span></a>
 <ul>
 <li><a href="fees-collections.html">Fees Collection</a></li>
@@ -175,7 +184,7 @@
 </li>
 <li>
 <a href="library.html"><i class="fas fa-book"></i> <span>Library</span></a>
-</li>
+</li> --}}
 
 </div>
 </div>

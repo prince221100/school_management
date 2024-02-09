@@ -11,7 +11,7 @@
 <h3 class="page-title">Show Leave Data</h3>
 <ul class="breadcrumb">
 <li class="breadcrumb-item"><a href="{{Route('dashboard')}}">Dashboard</a></li>
-<li class="breadcrumb-item active">All Student Leave Request</li>
+<li class="breadcrumb-item active">All Students Leave Request</li>
 </ul>
 </div>
 {{-- <div class="col-auto text-right float-right ml-auto">
@@ -50,6 +50,8 @@
         @if ($tdata->Admin->role == 3)
             <td>{{$loop->iteration}}</td>
             <td>{{$tdata->Admin->firstname}}</td>
+
+
             <td>{{$tdata->type}}</td>
             <td>{{$tdata->start_date}}</td>
             <td>{{$tdata->end_date}}</td>

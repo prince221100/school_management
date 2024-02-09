@@ -15,4 +15,5 @@ class Subject_info extends Model
         return $this->hasMany(Exam_Detail::class,'subject_name','id');
 
     }
+    
 }

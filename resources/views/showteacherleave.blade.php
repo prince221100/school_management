@@ -8,10 +8,10 @@
 <div class="page-header">
 <div class="row align-items-center">
 <div class="col">
-<h3 class="page-title">Show Leave Status</h3>
+<h3 class="page-title">Show Leave Data</h3>
 <ul class="breadcrumb">
 <li class="breadcrumb-item"><a href="{{Route('dashboard')}}">Dashboard</a></li>
-<li class="breadcrumb-item active"> Student Status</li>
+<li class="breadcrumb-item active">All Teachers Leave Request</li>
 </ul>
 </div>
 {{-- <div class="col-auto text-right float-right ml-auto">
@@ -29,14 +29,14 @@
 <table class="table table-hover table-center mb-0 datatable">
     <thead>
     <tr>
-        <th>ID</th>
-        {{-- <th>Student Name</th> --}}
+        {{-- <th>ID</th> --}}
+        <th>Teacher Name</th>
         <th>Type</th>
         <th>Start Date</th>
         <th>End Date</th>
-        <th> Status</th>
+        <th>Current Status</th>
 
-        @if (session()->get('role') != 3)
+        @if (session()->get('role') != 2)
 
             <th class="text-right">Action</th>
         @endif
@@ -47,9 +47,9 @@
 
 @foreach ($val as $tdata)
     <tr>
-        @if ($tdata->Admin->role == 3)
-            <td>{{$loop->iteration}}</td>
-            {{-- <td>{{$tdata->Admin->firstname}}</td> --}}
+        @if ($tdata->Admin->role == 2)
+            {{-- <td>{{$loop->index}}</td> --}}
+            <td>{{$tdata->Admin->firstname}}</td>
             <td>{{$tdata->type}}</td>
             <td>{{$tdata->start_date}}</td>
             <td>{{$tdata->end_date}}</td>
@@ -66,12 +66,12 @@
 
 
         <td class="text-right">
-            @if (session()->get('role') != 3)
+            @if (session()->get('role') != 2)
                 @if($tdata->status == 0)
                     <div class="actions">
-                    <a href="/acceptrequest/{{$tdata->id}}" class="btn btn-sm bg-success mr-2 edit">Accept</a>
+                    <a href="/acceptrequestteacher/{{$tdata->id}}" class="btn btn-sm bg-success mr-2 edit">Accept</a>
 
-                    <a href="/denyrequest/{{$tdata->id}}" class="btn btn-sm bg-danger mr-2 del">Deny</a>
+                    <a href="/denyrequestteacher/{{$tdata->id}}" class="btn btn-sm bg-danger mr-2 del">Deny</a>
 
                     </div>
                 @else

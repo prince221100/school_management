@@ -111,9 +111,19 @@ Route::post('/add-leave',[LeaveInfoController::class,'add_leave'])->name('add_le
 Route::get('/showstatus',[LeaveInfoController::class,'show_status'])->name('showstatus');
 
 
-// Principle accept or not and show data
+// Principle accept or not and student data
 Route::get('/showstudentleave',[LeaveInfoController::class,'show_studentleave'])->name('showstudent');
 
 Route::get('/acceptrequest/{id}',[LeaveInfoController::class,'acceptrequest'])->name('acceptrequest');
 Route::get('/denyrequest/{id}',[LeaveInfoController::class,'denyrequest'])->name('denyrequest');
 
+// teacher Leave request
+
+Route::get('/leave-request-teacher',[LeaveInfoController::class,'leave_request'])->name('leaverequestteacher');
+Route::post('/add-leave-teacher',[LeaveInfoController::class,'add_leave_teacher'])->name('add_leave_teacher');
+
+// principle accept or not teacher data
+Route::get('/showstatusteacher',[LeaveInfoController::class,'show_teacher_leave'])->name('showstatusteacher');
+
+Route::get('/acceptrequestteacher/{id}',[LeaveInfoController::class,'acceptrequesteacher'])->name('acceptrequestteacher');
+Route::get('/denyrequestteacher/{id}',[LeaveInfoController::class,'denyrequestteacher'])->name('denyrequestteacher');

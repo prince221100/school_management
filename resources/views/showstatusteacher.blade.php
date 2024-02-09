@@ -11,7 +11,7 @@
 <h3 class="page-title">Show Leave Status</h3>
 <ul class="breadcrumb">
 <li class="breadcrumb-item"><a href="{{Route('dashboard')}}">Dashboard</a></li>
-<li class="breadcrumb-item active"> Student Status</li>
+<li class="breadcrumb-item active">teacher Status</li>
 </ul>
 </div>
 {{-- <div class="col-auto text-right float-right ml-auto">
@@ -36,7 +36,7 @@
         <th>End Date</th>
         <th> Status</th>
 
-        @if (session()->get('role') != 3)
+        @if (session()->get('role') != 2)
 
             <th class="text-right">Action</th>
         @endif
@@ -47,7 +47,7 @@
 
 @foreach ($val as $tdata)
     <tr>
-        @if ($tdata->Admin->role == 3)
+        @if ($tdata->Admin->role == 2)
             <td>{{$loop->iteration}}</td>
             {{-- <td>{{$tdata->Admin->firstname}}</td> --}}
             <td>{{$tdata->type}}</td>
@@ -66,7 +66,7 @@
 
 
         <td class="text-right">
-            @if (session()->get('role') != 3)
+            @if (session()->get('role') != 2)
                 @if($tdata->status == 0)
                     <div class="actions">
                     <a href="/acceptrequest/{{$tdata->id}}" class="btn btn-sm bg-success mr-2 edit">Accept</a>
